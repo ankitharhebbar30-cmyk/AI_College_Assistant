@@ -2,6 +2,14 @@ console.log("♡ EduMate AI script loaded!");
 
 
 // =========================================================
+// BACKEND URL
+// =========================================================
+
+const API_BASE_URL =
+    "https://ai-college-assistant-kqmk.onrender.com";
+
+
+// =========================================================
 // GLOBAL DATA
 // =========================================================
 
@@ -377,7 +385,7 @@ async function sendMessage() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/chat",
+                API_BASE_URL + "/chat",
                 {
 
                     method: "POST",
@@ -436,7 +444,7 @@ async function sendMessage() {
 
 
         thinking.textContent =
-            "♡ Error connecting to FastAPI: " +
+            "♡ Error connecting to EduMate AI: " +
             error.message;
 
     }
@@ -636,7 +644,7 @@ async function uploadPDF() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/upload-pdf",
+                API_BASE_URL + "/upload-pdf",
                 {
 
                     method: "POST",
@@ -939,7 +947,7 @@ async function askAboutImage() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/ask-image",
+                API_BASE_URL + "/ask-image",
                 {
 
                     method: "POST",
@@ -1051,6 +1059,7 @@ if (imageFile) {
     );
 
 }
+
 
 // =========================================================
 // VOICE INPUT
@@ -1352,7 +1361,7 @@ async function generateToolResponse(
 
                 const response =
                     await fetch(
-                        "http://127.0.0.1:8000/chat",
+                        API_BASE_URL + "/chat",
                         {
 
                             method: "POST",
@@ -1466,7 +1475,6 @@ Do NOT use:
 ***
 ---
 backticks
-Markdown tables
 
 Do not put # or * around words.
 
