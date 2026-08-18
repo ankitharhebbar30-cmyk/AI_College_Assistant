@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduMate AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <h2 class="brand">
+                ♡ EduMate AI
+            </h2>
+
+
+            <button
+                id="new-chat"
+                class="new-chat"
+                type="button"
+            >
+                ＋ New Chat
+            </button>
+
+
+            <h3>
+                HISTORY
+            </h3>
+
+
+            <div id="history">
+                No chats yet
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             THEME
+        ================================== -->
+
+        <div class="sidebar-bottom">
+
+            <div
+                id="theme-menu"
+                class="theme-menu"
+            >
+
+                <div class="theme-title">
+                    ✧ Choose Theme
+                </div>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="light"
+                    type="button"
+                >
+                    ♡ Light
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="dark"
+                    type="button"
+                >
+                    ☾ Dark
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="midnight"
+                    type="button"
+                >
+                    ✦ Midnight
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="lavender"
+                    type="button"
+                >
+                    ♡ Lavender
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="ocean"
+                    type="button"
+                >
+                    ◇ Ocean
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="sakura"
+                    type="button"
+                >
+                    ❀ Sakura
+                </button>
+
+
+                <button
+                    class="theme-option"
+                    data-theme="forest"
+                    type="button"
+                >
+                    ❧ Forest
+                </button>
+
+            </div>
+
+
+            <button
+                id="theme-btn"
+                class="theme-btn"
+                type="button"
+            >
+                ✧ Theme
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN AREA
+    ====================================== -->
+
+    <main class="container">
+
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <div class="mobile-brand">
+                ♡ EduMate AI
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             WELCOME SCREEN
+        ================================== -->
+
+        <section
+            id="welcome"
+            class="welcome"
+        >
+
+            <div class="welcome-symbol">
+                ˚₊‧♡‧₊˚
+            </div>
+
+
+            <h1>
+                EduMate AI
+            </h1>
+
+
+            <p>
+                Your AI Study Companion
+            </p>
+
+
+            <span>
+                Ask questions, study smarter, learn better ♡
+            </span>
+
+        </section>
+
+
+
+        <!-- =================================
+             CHAT AREA
+        ================================== -->
+
+        <div id="chat-box"></div>
+
+
+
+        <!-- =================================
+             COMPOSER
+        ================================== -->
+
+        <div class="composer-area">
+
+
+            <!-- MAIN INPUT -->
+
+            <div class="input-area">
+
+
+                <!-- PDF ATTACHMENT -->
+
+                <button
+                    id="pdf-trigger"
+                    class="icon-button"
+                    type="button"
+                    title="Upload PDF"
+                >
+                    📎
+                </button>
+
+
+                <input
+                    id="pdf-file"
+                    class="hidden-file"
+                    type="file"
+                    accept=".pdf,application/pdf"
+                >
+
+
+                <!-- QUESTION -->
+
+                <input
+                    id="question"
+                    type="text"
+                    placeholder="Ask me anything..."
+                    autocomplete="off"
+                >
+
+
+                <!-- MICROPHONE -->
+
+                <button
+                    id="mic-btn"
+                    type="button"
+                    title="Voice input"
+                >
+                    🎙
+                </button>
+
+
+                <!-- SEND -->
+
+                <button
+                    id="send-btn"
+                    type="button"
+                    title="Send"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 TOOLS
+            ================================== -->
+
+            <div class="tools">
+
+
+                <!-- PDF -->
+
+                <button
+                    id="upload-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ✦ PDF
+                </button>
+
+
+                <!-- IMAGE -->
+
+                <input
+                    id="image-file"
+                    class="hidden-file"
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                >
+
+
+                <button
+                    id="image-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ✦ Image
+                </button>
+
+
+                <!-- NOTES -->
+
+                <button
+                    id="notes-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ✦ Notes
+                </button>
+
+
+                <!-- QUIZ -->
+
+                <button
+                    id="quiz-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ✦ Quiz
+                </button>
+
+
+                <!-- STUDY PLANNER -->
+
+                <button
+                    id="planner-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ✦ Plan
+                </button>
+
+
+                <!-- READ ANSWER -->
+
+                <button
+                    id="voice-btn"
+                    class="tool-button"
+                    type="button"
+                >
+                    ♫ Read
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="./script.js"></script>
+
+
+</body>
+
+</html>
